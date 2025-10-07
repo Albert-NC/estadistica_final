@@ -10,7 +10,7 @@ import reactDom from 'eslint-plugin-react-dom';
 
 export default [
 	{
-		ignores: ['dist'],
+		ignores: ['dist', 'eslint.config.js'],
 	},
 	eslint.configs.recommended,
 	...tseslint.configs.recommendedTypeChecked,
