@@ -12,7 +12,7 @@ Before configuring ESLint and Prettier in WebStorm, ensure you have the followin
 ## 1. Clone the Repository
 
 ```sh
-git clone https://github.com/RenatoMart/vite-react-ts-animejs--configs.git
+git clone https://github.com/RenatoMart/vite-react-ts-animejs-configs.git
 cd vite-react-ts-animejs--configs
 ```
 
