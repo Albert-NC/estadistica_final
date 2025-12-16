@@ -12,8 +12,8 @@ Before configuring ESLint and Prettier in WebStorm, ensure you have the followin
 ## 1. Clone the Repository
 
 ```sh
-git clone https://github.com/ChristoferNVR2/vite-react-ts-configs.git
-cd vite-react-ts-configs
+git clone https://github.com/RenatoMart/vite-react-ts-animejs--configs.git
+cd vite-react-ts-animejs--configs
 ```
 
 ## 2. Install Dependencies
@@ -106,4 +106,3 @@ For further details on configuring ESLint and Prettier in WebStorm, check out th
 ## Done!
 
 Your WebStorm project is now configured with ESLint and Prettier.
-
