@@ -1,108 +1,68 @@
-# Setting Up ESLint and Prettier in WebStorm for a TypeScript Project
+# Plantilla Universal para Escuelas Profesionales - UNT
 
-## Prerequisites
+Esta es una plantilla web moderna, modular y escalable construida con **React**, **Vite** y **TailwindCSS**. Está diseñada específicamente para ser utilizada como base por cualquier Escuela Profesional o Facultad de la **Universidad Nacional de Trujillo (UNT)**.
 
-Before configuring ESLint and Prettier in WebStorm, ensure you have the following installed:
+## Características Principales
 
-- **Node.js** (Download from [nodejs.org](https://nodejs.org/))
-- **WebStorm** (Latest version recommended)
-- **npm** or **yarn** (Comes with Node.js)
-- **Git** (For version control and GitHub integration)
+- 🚀 **Performance Optimizado:** Implementado con Vite, code-splitting (React.lazy) y animaciones aceleradas por hardware (Framer Motion) para evitar stuttering y asegurar un alto rendimiento en dispositivos móviles.
+- 🎨 **Diseño Moderno y Premium:** UI/UX pulida con TailwindCSS, garantizando una estética institucional (UNT) pero adaptada a estándares web contemporáneos.
+- 📱 **Totalmente Responsivo:** Adaptable a todos los dispositivos (móviles, tablets, escritorios).
+- 🧩 **Modular:** Sistema de constantes donde toda la información (misión, visión, docentes, plan de estudios, etc.) se encuentra en la carpeta `src/constants/` para un fácil reemplazo.
+- 🎓 **Sección de Admisión Integrada:** Módulo de modalidades de ingreso (Examen Ordinario, CEPUNT, etc.) adaptadas a la Universidad Nacional de Trujillo.
+- ⚡ **SEO Amigable:** Rutas pre-configuradas y estructura semántica.
 
-## 1. Clone the Repository
+## Estructura de Datos (Personalización)
 
-```sh
-git clone https://github.com/RenatoMart/vite-react-ts-animejs-configs.git
-cd vite-react-ts-animejs--configs
-```
+Toda la información "dura" de la escuela ha sido extraída del código principal y agrupada en la carpeta `src/constants/`. Para usar esta plantilla en una nueva escuela, **solo debes modificar estos archivos**:
 
-## 2. Install Dependencies
+- `academico.ts`: Plan de estudios, perfil del egresado, trámites y titulación.
+- `autoridades.ts`: Información del Director(a) de escuela y directores de departamento.
+- `contacto.ts`: Teléfonos, correos, enlaces a redes sociales (el mapa por defecto apunta a la sede UNT Trujillo).
+- `docentes.ts`: Lista de la plana docente.
+- `identidad.ts`: Misión, visión, reseña histórica y valores.
+- `investigacion.ts`: Líneas de investigación, proyectos y convenios institucionales.
+- `noticias.ts`: Eventos y noticias destacadas para el feed principal.
 
-Run the following command in the project root:
+## Requisitos Previos
 
-```sh
-npm install  # or yarn install
-```
+- **Node.js** (v18 o superior recomendado)
+- **npm** o **yarn**
 
-## 3. Install ESLint and Prettier (If Not Installed)
+## Instalación y Ejecución Local
 
-If you haven't installed ESLint and Prettier globally in the project, install them with:
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/RenatoMart/plantillaEscuelas.git
+   cd plantillaEscuelas
+   ```
 
-```sh
-npm install --save-dev eslint prettier @eslint/js typescript typescript-eslint eslint-plugin-react eslint-config-prettier eslint-plugin-react-x eslint-plugin-react-dom
-```
+2. Instala las dependencias:
+   ```sh
+   npm install
+   ```
 
-## 4. Configure ESLint in WebStorm
+3. Ejecuta el servidor de desarrollo:
+   ```sh
+   npm run dev
+   ```
 
-1. Open **WebStorm** and load the project.
-2. Go to **File** > **Settings** (or **Preferences** on macOS).
-3. Navigate to **Languages & Frameworks** > **JavaScript** > **Code Quality Tools** > **ESLint**.
-4. Check **Enable**.
-5. Choose **Manual ESLint Configuration**.
-6. Set **ESLint package** to: `node_modules/eslint`.
-7. Set **Configuration file** to `eslint.config.js`.
-8. In the Extra eslint options field, type `--flag unstable_ts_config`.
-9. Enable **Run eslint --fix on save**.
-10. Click **Apply** and **OK**.
+4. Abre tu navegador y ve a `http://localhost:5173`.
 
-## 5. Configure Prettier in WebStorm
+## Despliegue en Producción
 
-1. Go to **File** > **Settings** > **Languages & Frameworks** > **Prettier**.
-2. Check **Enable Prettier**.
-3. Choose **Manual Prettier Configuration**.
-4. Set **Prettier package** to `node_modules/prettier`.
-5. Set **Path to .prettierignore** to `.prettierignore`.
-6. Enable **Run 'Reformat Code' action** (Ctrl + Alt + L).
-7. Enable **Run on save** to automatically format files.
-8. Click **Apply** and **OK**.
-
-## 6. Run ESLint and Prettier Manually
-
-To check for linting errors, run:
+Para construir el proyecto para producción:
 
 ```sh
-npx eslint .
+npm run build
 ```
 
-To auto-fix issues, use:
+Este comando generará una carpeta `dist/` con los archivos optimizados listos para subir a cualquier servicio de hosting (ej. Vercel, Netlify, o un servidor propio de la UNT). Si utilizas Vercel, el archivo `vercel.json` incluido ya maneja las rutas de React Router.
 
-```sh
-npx eslint . --fix
-```
+## Tecnologías Utilizadas
 
-To format code with Prettier, run:
-
-```sh
-npx prettier --write .
-```
-
-## 7. Add ESLint and Prettier Scripts to package.json
-
-Add the following scripts to your `package.json`:
-
-```json
-{
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write ."
-  }
-}
-```
-
-You can add other scripts as needed.\
-This allows you to run linting and formatting commands easily.
-
-## 8. Resources & Documentation
-
-For further details on configuring ESLint and Prettier in WebStorm, check out the official documentation:
-
-- [Prettier Configuration in WebStorm](https://prettier.io/docs/webstorm) – Official guide for setting up Prettier in WebStorm.
-- [ESLint Configuration in WebStorm](https://www.jetbrains.com/help/webstorm/linting-typescript.html) – Official guide for enabling and configuring ESLint in WebStorm.
-- [ESLint Official Documentation](https://eslint.org/docs/latest/user-guide/getting-started) – Learn more about ESLint's features and best practices.
-- [Prettier Official Documentation](https://prettier.io/docs/en/index.html) – Complete guide to Prettier and its configuration options.
-
-
-## Done!
-
-Your WebStorm project is now configured with ESLint and Prettier.
+- [React 18](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/) (Animaciones fluidas)
+- [React Router DOM v7](https://reactrouter.com/)
+- [Lucide React](https://lucide.dev/) (Iconografía)
