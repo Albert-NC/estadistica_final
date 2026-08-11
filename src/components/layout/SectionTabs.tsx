@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import clsx from 'clsx';
-import useHeaderHeight from '../../hooks/useHeaderHeight';
 import type { NavLeaf } from '../../constants/navigation';
 
 /**
@@ -15,7 +14,6 @@ import type { NavLeaf } from '../../constants/navigation';
  *  - Accesible: foco de teclado visible, aria-current y respeto a reduced-motion.
  */
 export default function SectionTabs({ links }: { links: NavLeaf[] }) {
-  const headerHeight = useHeaderHeight();
   const prefersReducedMotion = useReducedMotion();
   const { pathname } = useLocation();
 
@@ -28,7 +26,7 @@ export default function SectionTabs({ links }: { links: NavLeaf[] }) {
   return (
     <div
       className="sticky z-30 bg-white border-b border-gray-200 shadow-sm"
-      style={{ top: headerHeight }}
+      style={{ top: 'var(--header-height, 0px)' }}
     >
       <div className="container mx-auto px-4 md:px-8 relative">
         {/* Fade en el borde derecho: pista de que hay más pestañas al deslizar

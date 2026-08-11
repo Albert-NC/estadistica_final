@@ -26,7 +26,7 @@ export default function ProyectoCard({ proyecto }: { proyecto: Proyecto }) {
       transition={{ duration: 0.3 }}
       className="group h-full"
     >
-      <div className="h-full flex flex-col bg-white rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-lg transition-[border-color,box-shadow] duration-300 overflow-hidden">
+      <div className="h-full flex flex-col bg-white rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-lg transition-all duration-300 overflow-hidden">
         {/* Franja superior de estado */}
         <div className={`h-1.5 w-full ${isActive ? 'bg-emerald-400' : 'bg-gray-300'}`} />
 

@@ -10,7 +10,7 @@ export default function Lineas() {
       <div className="container mx-auto px-4 md:px-8">
         <SectionTitle
           title="Líneas de **Investigación**"
-          subtitle="Áreas prioritarias para la generación de conocimiento e innovación ambiental."
+          subtitle="Áreas prioritarias para la generación de conocimiento y desarrollo metodológico estadístico."
           center
         />
 
@@ -25,7 +25,7 @@ export default function Lineas() {
               whileHover={{ y: -6 }}
               className="group h-full"
             >
-              <div className="h-full bg-white rounded-2xl border border-gray-100 hover:border-gold/40 hover:shadow-[0_8px_32px_rgba(230,172,9,0.1)] transition-[border-color,box-shadow] duration-300 overflow-hidden flex flex-col">
+              <div className="h-full bg-white rounded-2xl border border-gray-100 hover:border-gold/40 hover:shadow-[0_8px_32px_rgba(230,172,9,0.1)] transition-all duration-300 overflow-hidden flex flex-col">
                 {/* Cabecera coloreada */}
                 <div className="bg-primary px-6 pt-6 pb-8 relative overflow-hidden">
                   {/* Patrón de fondo */}

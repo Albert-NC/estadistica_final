@@ -12,7 +12,7 @@ export default function Noticias() {
     <PageWrapper>
       <PageHero
         title="Noticias y Actualidad"
-        subtitle="Eventos, convocatorias y logros de la Escuela Profesional de [Nombre de la Escuela]."
+        subtitle="Eventos, convocatorias y logros de la Escuela Profesional de Estadística."
         icon={Newspaper}
         breadcrumbs={[{ label: 'Noticias' }]}
       />
@@ -33,14 +33,20 @@ export default function Noticias() {
                   <Card className="h-full flex flex-col p-0 overflow-hidden hover:shadow-lg transition-shadow">
                     {/* Franja superior */}
                     <div className="h-1.5 bg-primary w-full" />
-                    {/* Imagen */}
+                    {/* Imagen o color entero si está vacío */}
                     <div className="h-48 w-full overflow-hidden shrink-0">
-                      <img
-                        src={noticia.imagen}
-                        alt={noticia.titulo}
-                        loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
+                      {noticia.imagen ? (
+                        <img
+                          src={noticia.imagen}
+                          alt={noticia.titulo}
+                          loading="lazy"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-pucp-blue-dark to-blue-deep flex items-center justify-center text-white/20 group-hover:from-blue-deep group-hover:to-pucp-blue-dark transition-all duration-300">
+                          <Newspaper className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                      )}
                     </div>
                     <div className="p-6 flex flex-col flex-1">
                       <div className="flex items-center gap-2 mb-3">
@@ -58,7 +64,7 @@ export default function Noticias() {
                       <p className="text-gray-600 text-sm leading-relaxed mb-4">
                         {noticia.resumen}
                       </p>
-                      <span className="mt-auto inline-flex items-center gap-1 text-gold text-sm font-bold group-hover:gap-2 transition-[gap]">
+                      <span className="mt-auto inline-flex items-center gap-1 text-gold text-sm font-bold group-hover:gap-2 transition-all">
                         Leer más <ArrowRight className="w-3.5 h-3.5" />
                       </span>
                     </div>

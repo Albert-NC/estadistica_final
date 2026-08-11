@@ -21,7 +21,7 @@ export default function OrganigramaNode({ nodo, level = 0 }: OrganigramaNodeProp
         viewport={{ once: true }}
         transition={{ delay: level * 0.15 }}
         className={`relative p-5 rounded-xl text-center min-w-[240px] max-w-[280px] z-10 shadow-lg border overflow-hidden
-          ${level === 0 ? 'bg-primary text-white border-transparent ring-4 ring-primary/10' : 'bg-white border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-[transform,box-shadow] duration-300'}`}
+          ${level === 0 ? 'bg-primary text-white border-transparent ring-4 ring-primary/10' : 'bg-white border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300'}`}
       >
         {level !== 0 && <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-gold"></div>}
         

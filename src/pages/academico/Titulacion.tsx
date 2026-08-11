@@ -25,7 +25,7 @@ export default function Titulacion() {
               transition={{ delay: idx * 0.12, duration: 0.4 }}
               className="group"
             >
-              <div className="h-full flex flex-col bg-white rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-[0_8px_32px_rgba(230,172,9,0.1)] transition-[border-color,box-shadow] duration-300 overflow-hidden">
+              <div className="h-full flex flex-col bg-white rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-[0_8px_32px_rgba(230,172,9,0.1)] transition-all duration-300 overflow-hidden">
                 {/* Cabecera azul */}
                 <div className="bg-primary p-7 relative overflow-hidden">
                   <div className="absolute inset-0 opacity-[0.05]"
@@ -76,7 +76,7 @@ export default function Titulacion() {
                     href={tramite.pdfUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gold hover:bg-gold-deep text-blue-deep font-black rounded-xl transition-colors text-sm group-hover:shadow-[0_4px_20px_rgba(230,172,9,0.4)]"
+                    className="mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gold hover:bg-[#C49308] text-blue-deep font-black rounded-xl transition-colors text-sm group-hover:shadow-[0_4px_20px_rgba(230,172,9,0.4)]"
                   >
                     <Download className="w-4 h-4" />
                     Descargar Requisitos

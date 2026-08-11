@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { GraduationCap, Award, Info, ChevronRight, ExternalLink, BookOpen, Star } from 'lucide-react';
-import useHeaderHeight from '../../hooks/useHeaderHeight';
 import { ADMISION_GROUPS } from '../../constants/navigation';
 
 /**
@@ -15,7 +14,6 @@ export default function FloatingAdmissions() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const headerHeight = useHeaderHeight();
   const containerRef = useRef<HTMLDivElement>(null);
 
   // En táctil no hay hover: cerrar con Escape o al tocar fuera del panel.
@@ -33,11 +31,13 @@ export default function FloatingAdmissions() {
     };
   }, [open]);
 
+  if (!isHome) return null;
+
   return (
     <div
       ref={containerRef}
-      style={{ top: headerHeight }}
-      className={`fixed left-0 bottom-4 z-[40] flex items-start transition-transform duration-500 ease-in-out ${open ? 'translate-x-0' : '-translate-x-full'} ${!isHome ? 'max-md:hidden' : ''}`}
+      style={{ top: 'var(--header-height, 0px)' }}
+      className={`fixed left-0 bottom-4 z-[60] flex items-start transition-transform duration-500 ease-in-out ${open ? 'translate-x-0' : '-translate-x-full'}`}
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
@@ -49,7 +49,7 @@ export default function FloatingAdmissions() {
         </div>
 
         <p className="text-sm md:text-base leading-tight mb-4 text-white/95 shrink-0">
-          Descubre las modalidades de ingreso para formar parte de la Escuela de [Nombre de la Escuela].
+          Descubre las modalidades de ingreso para formar parte de la Escuela de Estadística.
         </p>
 
         <div className="flex-1 overflow-y-auto overscroll-contain pr-2 space-y-3 custom-scrollbar">
@@ -60,7 +60,7 @@ export default function FloatingAdmissions() {
               <h4 className="font-bold text-base">Examen Ordinario</h4>
             </div>
             <p className="text-[13px] mb-2">
-              <strong className="font-bold">Dirigido a:</strong> Egresados de [Nivel Educativo Requerido].
+              <strong className="font-bold">Dirigido a:</strong> Egresados de Educación Secundaria.
             </p>
             <div className="flex items-center gap-2 mb-2">
               <span className="font-bold text-[13px]">Vacantes:</span>
@@ -180,7 +180,7 @@ export default function FloatingAdmissions() {
         onClick={(e) => { e.stopPropagation(); setOpen((o) => !o); }}
         aria-expanded={open}
         aria-label={open ? 'Cerrar información de admisión' : 'Ver información de admisión'}
-        className="absolute right-0 top-[82px] translate-x-full bg-gold text-primary py-4 px-2 md:py-6 md:px-3.5 rounded-r-lg md:rounded-r-xl cursor-pointer flex flex-col items-center gap-3 md:gap-4 shadow-[4px_0_15px_rgba(0,0,0,0.15)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+        className="absolute right-0 top-[150px] md:top-[220px] translate-x-full bg-gold text-primary py-4 px-2 md:py-6 md:px-3.5 rounded-r-lg md:rounded-r-xl cursor-pointer flex flex-col items-center gap-3 md:gap-4 shadow-[4px_0_15px_rgba(0,0,0,0.15)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
       >
         <GraduationCap className="w-5 h-5 md:w-7 md:h-7" />
         <span className="[writing-mode:vertical-rl] rotate-180 font-bold tracking-[0.2em] text-[18px] md:text-[26px]">

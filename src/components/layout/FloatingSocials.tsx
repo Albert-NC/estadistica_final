@@ -5,7 +5,7 @@ export default function FloatingSocials() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
       {/* Facebook */}
       <a
-        href="https://facebook.com"
+        href="https://www.facebook.com/escuelaestadistica.ingenieriaestadistica?locale=es_LA"
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 bg-[#1877F2] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-[transform,box-shadow] duration-300 transform-gpu group"

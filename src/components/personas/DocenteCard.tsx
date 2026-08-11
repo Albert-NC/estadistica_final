@@ -79,7 +79,7 @@ export default function DocenteCard({ docente }: { docente: Docente }) {
             </h4>
             <div className="border-t border-white/20 my-3" />
             <p className="text-gold text-[10px] font-black uppercase tracking-[0.18em] mb-2">
-              Especialidades
+              Detalles de especialidades
             </p>
           </div>
           <ul className="space-y-2 overflow-y-auto overscroll-contain custom-scrollbar text-left flex-1 pr-1">

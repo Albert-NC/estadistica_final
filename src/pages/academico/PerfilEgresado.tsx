@@ -11,7 +11,7 @@ export default function PerfilEgresado() {
           <SectionTitle
             title="Perfil del Egresado"
             center
-            subtitle="Al término de la carrera, el estudiante de [Nombre de la Escuela] de la Universidad Nacional de Trujillo (UNT) tendrá las siguientes cualidades:"
+            subtitle="Al término de la carrera, el estudiante de Estadística de la Universidad Nacional de Trujillo (UNT) tendrá las siguientes cualidades:"
           />
           <div className="mt-8 grid gap-4">
             {perfilEgresado.map((comp, idx) => (

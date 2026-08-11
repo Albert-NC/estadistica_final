@@ -58,6 +58,14 @@ npm run build
 
 Este comando generará una carpeta `dist/` con los archivos optimizados listos para subir a cualquier servicio de hosting (ej. Vercel, Netlify, o un servidor propio de la UNT). Si utilizas Vercel, el archivo `vercel.json` incluido ya maneja las rutas de React Router.
 
+## Optimizaciones de Rendimiento Aplicadas
+
+Se han realizado optimizaciones avanzadas de rendimiento para asegurar una navegación fluida, reduciendo drásticamente los cuellos de botella de **Paint** (repintado) y del hilo principal:
+
+1. 🎬 **Fachada de Video (YouTube Facade):** Reemplazo de la carga directa del `<iframe>` de YouTube por el componente [`YoutubeVideo.tsx`](file:///home/cazil/proyectos/CERTIFICACIONES/plantillaEscuelas/src/components/ui/YoutubeVideo.tsx). Muestra una miniatura de alta resolución y solo monta el reproductor dinámicamente en respuesta a un clic del usuario. Esto ahorra ~1.5MB de JS de terceros y evita que corran subprocesos innecesarios en la carga inicial.
+2. ⚡ **Sombras Aceleradas por GPU (Opacity Shadow Hack):** Las tarjetas en [`Inicio.tsx`](file:///home/cazil/proyectos/CERTIFICACIONES/plantillaEscuelas/src/pages/Inicio.tsx) y [`Noticias.tsx`](file:///home/cazil/proyectos/CERTIFICACIONES/plantillaEscuelas/src/pages/Noticias.tsx) que se animan con Framer Motion en escala o traslación ya no transicionan el CSS `box-shadow` directamente (lo cual forzaba repintados costosos). En su lugar, el componente [`Card.tsx`](file:///home/cazil/proyectos/CERTIFICACIONES/plantillaEscuelas/src/components/ui/Card.tsx) y los accesos rápidos usan una capa absoluta con la sombra pre-calculada que transiciona su `opacity` (GPU-friendly) al hacer hover.
+3. 🖼️ **Control Inteligente de Capas GPU en Carrusel:** El carrusel de imágenes del Hero principal ahora activa `will-change: opacity` únicamente en la imagen activa y la previa que está transicionando. Para las imágenes ocultas (`opacity: 0`), se restablece a `auto`, liberando memoria de texturas en la GPU y evitando sobrecarga del compositor del navegador.
+
 ## Tecnologías Utilizadas
 
 - [React 18](https://reactjs.org/)

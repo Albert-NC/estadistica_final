@@ -11,7 +11,7 @@ export default function PerfilIngresante() {
           <SectionTitle
             title="Perfil del Ingresante"
             center
-            subtitle="Habilidades y actitudes ideales para formar parte de la carrera de [Nombre de la Especialidad]."
+            subtitle="Habilidades y actitudes ideales para formar parte de la carrera de Estadística."
           />
           <div className="mt-8 bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-t-secondary">
             <ul className="space-y-4">

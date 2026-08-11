@@ -6,7 +6,7 @@ export default function AcademicoIndex() {
   return (
     <SectionLayout
       title="Área Académica"
-      subtitle="Descubre todo lo relacionado con tu formación profesional en [Nombre de la Especialidad]."
+      subtitle="Descubre todo lo relacionado con tu formación profesional en Estadística."
       icon={GraduationCap}
       basePath="/academico"
       breadcrumbs={[{ label: 'Académico' }]}

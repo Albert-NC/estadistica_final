@@ -30,7 +30,7 @@ export default function HitoTimeline({ hitos }: { hitos?: Hito[] }) {
             <div className="absolute -left-[26px] md:-left-[34px] top-1 w-4 h-4 rounded-full border-2 border-gold bg-white group-hover:bg-gold transition-colors duration-300 z-10 shrink-0" />
 
             {/* Contenido */}
-            <div className="flex-1 bg-white rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-md transition-[border-color,box-shadow] duration-300 p-5 flex gap-4 items-start">
+            <div className="flex-1 bg-white rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-md transition-all duration-300 p-5 flex gap-4 items-start">
               {/* Año destacado */}
               <div className="shrink-0 text-right">
                 <span className="text-2xl font-display font-black text-gold leading-none">

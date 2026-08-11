@@ -1,36 +1,36 @@
 export const director = {
-  nombre: "[Nombre del Director/a]",
-  cargo: "Director de la Escuela Profesional de [Nombre de la Escuela]",
+  nombre: "Director(a) de la Escuela",
+  cargo: "Dirección de Escuela",
   correo: "direccion.escuela@unitru.edu.pe",
-  bio: "Reseña académica y profesional del director/a de la Escuela, detallando su grado académico, áreas de especialización y trayectoria profesional.",
+  bio: "Breve descripción de las funciones y trayectoria del director de la escuela profesional.",
   foto: null // Placeholder
 };
 
 export const coordinadores = [
   {
-    nombre: "[Nombre del Coordinador/a]",
-    cargo: "Coordinador Académico",
-    correo: "academico.escuela@unitru.edu.pe"
+    nombre: "Coordinador(a) Académico(a)",
+    cargo: "Coordinación Académica",
+    correo: "acad.escuela@unitru.edu.pe"
   },
   {
-    nombre: "[Nombre del Coordinador/a]",
-    cargo: "Coordinador de Investigación",
-    correo: "investigacion.escuela@unitru.edu.pe"
+    nombre: "Coordinador(a) de Investigación",
+    cargo: "Coordinación de Investigación",
+    correo: "investiga.escuela@unitru.edu.pe"
   },
   {
-    nombre: "[Nombre del Coordinador/a]",
-    cargo: "Coordinador de Prácticas Preprofesionales",
+    nombre: "Coordinador(a) de Prácticas Preprofesionales",
+    cargo: "Coordinación de Prácticas",
     correo: "practicas.escuela@unitru.edu.pe"
   }
 ];
 
 export const organigrama = {
   nombre: "Dirección de Escuela",
-  cargo: "[Nombre del Director/a]",
+  cargo: "Director(a) de la Escuela",
   hijos: [
     {
       nombre: "Coordinación Académica",
-      cargo: "[Nombre del Coordinador/a]",
+      cargo: "Coordinador(a) Académico(a)",
       hijos: [
         { nombre: "Comité de Currículo", cargo: "" },
         { nombre: "Tutoría y Asesoría", cargo: "" }
@@ -38,11 +38,11 @@ export const organigrama = {
     },
     {
       nombre: "Coordinación de Investigación",
-      cargo: "[Nombre del Coordinador/a]"
+      cargo: "Coordinador(a) de Investigación"
     },
     {
       nombre: "Prácticas Preprofesionales",
-      cargo: "[Nombre del Coordinador/a]"
+      cargo: "Coordinador(a) de Prácticas"
     }
   ]
 };

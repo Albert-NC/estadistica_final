@@ -32,11 +32,10 @@ export function Accordion({ title, children, defaultOpen = false, className }: A
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scaleY: 0.95 }}
-            animate={{ opacity: 1, scaleY: 1 }}
-            exit={{ opacity: 0, scaleY: 0.95 }}
-            transition={{ duration: 0.22, ease: 'easeOut' }}
-            className="origin-top [will-change:transform,opacity] overflow-hidden"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
             <div className="p-4 border-t border-gray-100 bg-white">
               {children}

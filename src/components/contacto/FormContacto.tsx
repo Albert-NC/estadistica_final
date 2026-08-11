@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { CheckCircle2 } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { validarFormularioContacto, type ContactoFormData, type ContactoErrores } from '../../utils/validators';
 
@@ -31,7 +30,7 @@ export default function FormContacto() {
   if (enviado) {
     return (
       <div className="bg-success/10 text-success p-8 rounded-xl text-center border border-success/20 animate-fade-in">
-        <CheckCircle2 className="w-14 h-14 mx-auto mb-4" />
+        <div className="text-5xl mb-4">✅</div>
         <h3 className="text-xl font-display font-bold mb-2">¡Mensaje Enviado!</h3>
         <p className="text-sm">Gracias por contactarnos. Te responderemos a la brevedad.</p>
       </div>
@@ -55,7 +54,7 @@ export default function FormContacto() {
           aria-invalid={errores.nombre ? 'true' : undefined}
           aria-describedby={errores.nombre ? 'contacto-nombre-error' : undefined}
           placeholder="Tu nombre completo"
-          className={`w-full p-3 rounded-lg border ${errores.nombre ? 'border-red-500' : 'border-gray-200'} focus:ring-2 focus:ring-primary/20 outline-none transition-[border-color,box-shadow] text-base md:text-sm`}
+          className={`w-full p-3 rounded-lg border ${errores.nombre ? 'border-red-500' : 'border-gray-200'} focus:ring-2 focus:ring-primary/20 outline-none transition-all text-base md:text-sm`}
         />
         {errores.nombre && <span id="contacto-nombre-error" role="alert" className="text-xs text-red-500 mt-1 block">{errores.nombre}</span>}
       </div>
@@ -74,7 +73,7 @@ export default function FormContacto() {
           aria-invalid={errores.email ? 'true' : undefined}
           aria-describedby={errores.email ? 'contacto-email-error' : undefined}
           placeholder="Tu correo electrónico"
-          className={`w-full p-3 rounded-lg border ${errores.email ? 'border-red-500' : 'border-gray-200'} focus:ring-2 focus:ring-primary/20 outline-none transition-[border-color,box-shadow] text-base md:text-sm`}
+          className={`w-full p-3 rounded-lg border ${errores.email ? 'border-red-500' : 'border-gray-200'} focus:ring-2 focus:ring-primary/20 outline-none transition-all text-base md:text-sm`}
         />
         {errores.email && <span id="contacto-email-error" role="alert" className="text-xs text-red-500 mt-1 block">{errores.email}</span>}
       </div>
@@ -93,7 +92,7 @@ export default function FormContacto() {
           aria-invalid={errores.asunto ? 'true' : undefined}
           aria-describedby={errores.asunto ? 'contacto-asunto-error' : undefined}
           placeholder="Asunto del mensaje"
-          className={`w-full p-3 rounded-lg border ${errores.asunto ? 'border-red-500' : 'border-gray-200'} focus:ring-2 focus:ring-primary/20 outline-none transition-[border-color,box-shadow] text-base md:text-sm`}
+          className={`w-full p-3 rounded-lg border ${errores.asunto ? 'border-red-500' : 'border-gray-200'} focus:ring-2 focus:ring-primary/20 outline-none transition-all text-base md:text-sm`}
         />
         {errores.asunto && <span id="contacto-asunto-error" role="alert" className="text-xs text-red-500 mt-1 block">{errores.asunto}</span>}
       </div>
@@ -112,7 +111,7 @@ export default function FormContacto() {
           aria-invalid={errores.mensaje ? 'true' : undefined}
           aria-describedby={errores.mensaje ? 'contacto-mensaje-error' : undefined}
           placeholder="Escribe tu mensaje aquí..."
-          className={`w-full p-3 rounded-lg border ${errores.mensaje ? 'border-red-500' : 'border-gray-200'} focus:ring-2 focus:ring-primary/20 outline-none transition-[border-color,box-shadow] text-base md:text-sm resize-none`}
+          className={`w-full p-3 rounded-lg border ${errores.mensaje ? 'border-red-500' : 'border-gray-200'} focus:ring-2 focus:ring-primary/20 outline-none transition-all text-base md:text-sm resize-none`}
         ></textarea>
         {errores.mensaje && <span id="contacto-mensaje-error" role="alert" className="text-xs text-red-500 mt-1 block">{errores.mensaje}</span>}
       </div>

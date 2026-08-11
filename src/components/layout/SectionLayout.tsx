@@ -6,7 +6,7 @@ import PageHero, { type Breadcrumb } from './PageHero';
 import SectionTabs from './SectionTabs';
 import { getSection, getInternalItems } from '../../constants/navigation';
 
-const SITE_NAME = '[Nombre de la Escuela] · UNT';
+const SITE_NAME = 'Estadística · UNT';
 
 interface SectionLayoutProps {
   title: string;

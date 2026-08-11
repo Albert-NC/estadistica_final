@@ -7,7 +7,7 @@ export default function Historia() {
   return (
     <div className="bg-white py-16 md:py-20">
       <div className="container mx-auto px-4 md:px-8">
-        <SectionTitle title="Nuestra **Historia**" center subtitle="Formando ingenieros ambientales comprometidos con la sostenibilidad." />
+        <SectionTitle title="Nuestra **Historia**" center subtitle="Formando profesionales comprometidos con el análisis estadístico y la ciencia de datos." />
         
         <div className="max-w-3xl mx-auto mt-12 mb-16 text-center">
           <p className="text-gray-600 font-body text-lg leading-relaxed bg-light p-8 rounded-xl border border-gray-100 shadow-sm">

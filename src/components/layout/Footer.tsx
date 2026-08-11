@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Clock, ExternalLink, BookOpen } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, ExternalLink, BookOpen, Briefcase } from 'lucide-react';
 import { informacionContacto, redesSociales } from '../../constants/contacto';
-import { socialIcons, socialLabels } from '../icons/social';
 import logo from '../../assets/unt1.png';
+
+import { socialIcons, socialLabels } from '../icons/social';
 
 // Libro de Reclamaciones oficial (plataforma del Estado peruano, UNT).
 const LIBRO_RECLAMACIONES_URL = 'https://reclamos.servicios.gob.pe/?institution_id=247';
@@ -21,18 +22,18 @@ export default function Footer() {
             {/* Columna 1: Identidad + Redes */}
             <div>
               <div className="flex items-center gap-3 mb-5">
-                <img src={logo} alt="Logo UNT" loading="lazy" className="h-14 w-auto object-contain invert" />
+                <img src={logo} alt="Logo UNT" loading="lazy" className="h-14 w-auto object-contain drop-shadow brightness-200" />
                 <div className="flex flex-col">
                   <span className="font-display font-bold leading-tight text-base text-white">
-                    [Nombre de la Escuela]
+                    Estadística
                   </span>
                   <span className="text-white/60 text-xs uppercase tracking-wider">
-                    UNT · [Facultad a la que pertenece]
+                    UNT · Fac. Ciencias Físicas y Matemáticas
                   </span>
                 </div>
               </div>
               <p className="text-gray-300 font-body text-sm leading-relaxed mb-6">
-                Formando [profesionales de la especialidad] de excelencia, con rigor científico y compromiso con el desarrollo del país.
+                Formando profesionales en estadística de excelencia, con rigor científico y compromiso con el desarrollo del país.
               </p>
               {/* Social icons */}
               <div className="flex items-center gap-3 flex-wrap">
@@ -69,7 +70,7 @@ export default function Footer() {
                   <li key={to}>
                     <Link
                       to={to}
-                      className="text-gray-300 hover:text-white hover:translate-x-1 transition-[color,transform] duration-150 text-sm flex items-center gap-1.5"
+                      className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-150 text-sm flex items-center gap-1.5"
                     >
                       <span className="text-gold text-xs">›</span>
                       {label}
@@ -146,19 +147,61 @@ export default function Footer() {
                   <ExternalLink className="w-3.5 h-3.5" />
                   Portal del Estudiante
                 </a>
-              </div>
             </div>
 
           </div>
+
+        </div>
+
+        {/* Banners: Libro de Reclamaciones & Bolsa de Trabajo */}
+        <div className="border-t border-white/10 pt-8 mt-8 flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-10">
+            {/* Libro de Reclamaciones */}
+            <a
+              href={LIBRO_RECLAMACIONES_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-gold/30 rounded-2xl p-5 w-full max-w-sm transition-all duration-300 group shadow-md"
+            >
+              <div className="w-14 h-14 shrink-0 flex items-center justify-center bg-gold/10 rounded-xl group-hover:bg-gold/20 transition-colors">
+                <BookOpen className="w-8 h-8 text-gold group-hover:scale-105 transition-transform" />
+              </div>
+              <div className="text-left">
+                <h4 className="font-display font-black text-sm uppercase tracking-wider text-white mb-0.5 group-hover:text-gold transition-colors">
+                  Libro de Reclamaciones
+                </h4>
+                <p className="text-xs text-gray-300 leading-tight">
+                  Formule sus quejas y reclamos sobre nuestro servicio.
+                </p>
+              </div>
+            </a>
+
+            {/* Bolsa de Trabajo */}
+            <div
+              className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-5 w-full max-w-sm shadow-md cursor-default"
+            >
+              <div className="w-14 h-14 shrink-0 flex items-center justify-center bg-white/10 rounded-xl">
+                <Briefcase className="w-8 h-8 text-gray-300" />
+              </div>
+              <div className="text-left">
+                <h4 className="font-display font-black text-sm uppercase tracking-wider text-white mb-0.5">
+                  Bolsa de Trabajo
+                </h4>
+                <p className="text-xs text-gray-300 leading-tight">
+                  Próximamente convocatorias y ofertas laborales.
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
       {/* Bottom bar */}
       <div className="bg-black/20 py-4">
         <div className="container mx-auto px-4 md:px-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-300">
-          <p>© {currentYear} Escuela Profesional de [Nombre de la Escuela] · UNT. Todos los derechos reservados.</p>
+          <p>© {currentYear} Escuela Profesional de Estadística · UNT. Todos los derechos reservados.</p>
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5">
-            <p>Ley de Transparencia N° 27806: Acceso a la Información Pública</p>
+            <p>Ley de Transparencia N° 27806 — Acceso a la Información Pública</p>
             <a
               href={LIBRO_RECLAMACIONES_URL}
               target="_blank"

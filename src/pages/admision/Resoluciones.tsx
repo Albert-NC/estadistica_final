@@ -6,7 +6,7 @@ import { FileText } from 'lucide-react';
 
 export default function Resoluciones() {
   useEffect(() => {
-    document.title = 'Resoluciones | Admisión | [Nombre de la Escuela] · UNT';
+    document.title = 'Resoluciones | Admisión | Estadística · UNT';
   }, []);
 
   return (

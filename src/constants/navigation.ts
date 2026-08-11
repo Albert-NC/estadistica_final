@@ -144,6 +144,7 @@ export const NAV_LINKS: NavSection[] = [
         label: 'Recursos',
         items: [
           { name: 'Laboratorios', path: '/academico/laboratorios' },
+          { name: 'Biblioteca', path: '/academico/biblioteca' },
           { name: 'Bienestar', path: '#', external: true },
         ],
       },
@@ -195,7 +196,7 @@ export const ADMISION_GROUPS: NavGroup[] = [
   {
     label: 'Postulantes',
     items: [
-      { name: 'Guía del postulante', path: '/admision/guia' },
+      { name: 'Guía del postulante', path: 'https://www.admisionunt.info/', external: true },
     ],
   },
   {
