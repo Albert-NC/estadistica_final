@@ -10,7 +10,12 @@ export const docentes = [
     grado: "Doctor",
     cursoPrincipal: "Asociado D.E.",
     especialidades: ["Geoestadística", "Modelos de interpolación", "Análisis espacial"],
-    foto: "/images/docentes/LUIS ALBERTO RUBIO JACOBO.webp"
+    foto: "/images/docentes/LUIS ALBERTO RUBIO JACOBO.webp",
+    descripcion: "Especialista en estadística espacial, geoestadística aplicada y modelos de interpolación para el análisis de datos geoespaciales. Cuenta con amplia trayectoria docente y de investigación en la Universidad Nacional de Trujillo.",
+    linkTrabajo: {
+      titulo: "Ver Perfil ORCID / Trabajos",
+      url: "https://orcid.org/0000-0001-5060-9998"
+    }
   },
   // 2. Siguientes 4 profesores principales
   {

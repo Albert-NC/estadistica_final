@@ -16,6 +16,10 @@ interface Docente {
   foto?: string | null;
   especialidades?: string[];
   descripcion?: string;
+  linkTrabajo?: {
+    titulo: string;
+    url: string;
+  };
 }
 
 interface DocenteCardProps {
@@ -116,10 +120,41 @@ export default function DocenteCard({ docente, noFlip = false }: DocenteCardProp
             </h4>
             <div className="border-t border-white/20 my-3" />
           </div>
-          {docente.descripcion && (
-            <p className="text-xs text-white/90 leading-relaxed text-justify overflow-y-auto overscroll-contain custom-scrollbar flex-1 pr-1">
-              {docente.descripcion}
-            </p>
+          
+          <div className="flex-1 overflow-y-auto pr-1 text-left custom-scrollbar space-y-3">
+            {docente.descripcion && (
+              <p className="text-xs text-white/90 leading-relaxed text-justify">
+                {docente.descripcion}
+              </p>
+            )}
+
+            {docente.especialidades && docente.especialidades.length > 0 && (
+              <div>
+                <p className="text-[10px] font-black uppercase text-gold tracking-wider mb-1">
+                  Especialidades
+                </p>
+                <ul className="space-y-1 text-xs text-white/90">
+                  {docente.especialidades.map((esp, i) => (
+                    <li key={i} className="flex items-start gap-1">
+                      <span className="text-gold">•</span>
+                      <span>{esp}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {docente.linkTrabajo && (
+            <a
+              href={docente.linkTrabajo.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center justify-center gap-1.5 bg-gold hover:bg-[#C49308] text-blue-deep font-black px-3 py-2 rounded-xl text-xs transition-colors w-full cursor-pointer shadow-md"
+            >
+              <span>{docente.linkTrabajo.titulo}</span>
+              <span className="text-[9px]">↗</span>
+            </a>
           )}
         </div>
 
