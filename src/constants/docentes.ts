@@ -23,21 +23,36 @@ export const docentes = [
     grado: "Doctora",
     cursoPrincipal: "Principal D.E.",
     especialidades: ["Estadística social", "Metodología de la investigación", "Diseño de encuestas"],
-    foto: "/images/docentes/ROSA DEIDAMIA GUTIÉRREZ DE ALARCÓN.webp"
+    foto: "/images/docentes/ROSA DEIDAMIA GUTIÉRREZ DE ALARCÓN.webp",
+    descripcion: "Docente y especialista en estadística social, metodologías de la investigación científica y diseño de encuestas en la Universidad Nacional de Trujillo.",
+    linkTrabajo: {
+      titulo: "Ver Tesis y Trabajos",
+      url: "https://repositorio.unitru.edu.pe/collections/beb24350-804a-4da6-a293-b4e77db91771/search?spc.page=1&query=Dra.%20Rosa%20Deidamia%20Guti%C3%A9rrez%20de%20Alarc%C3%B3n"
+    }
   },
   {
     nombre: "MSc. Manuel Antonio Sisniegas Gonzales",
     grado: "Maestro",
     cursoPrincipal: "Principal D.E.",
     especialidades: ["Inferencia estadística", "Estimación paramétrica", "Pruebas de hipótesis"],
-    foto: "/images/docentes/MANUEL ANTONIO SISNIEGAS GONZALES.webp"
+    foto: "/images/docentes/MANUEL ANTONIO SISNIEGAS GONZALES.webp",
+    descripcion: "Docente y especialista en inferencia estadística, estimación paramétrica y pruebas de hipótesis en la Universidad Nacional de Trujillo.",
+    linkTrabajo: {
+      titulo: "Ver Tesis y Trabajos",
+      url: "https://repositorio.unitru.edu.pe/collections/beb24350-804a-4da6-a293-b4e77db91771/search?spc.page=1&query=MSc.%20Manuel%20Antonio%20Sisniegas%20Gonzales"
+    }
   },
   {
     nombre: "MSc. Martha Renee Cardoso Vigil",
     grado: "Maestra",
     cursoPrincipal: "Principal D.E.",
     especialidades: ["Probabilidad aplicada", "Procesos estocásticos", "Modelos probabilísticos"],
-    foto: "/images/docentes/MARTHA RENEE CARDOSO VIGIL.webp"
+    foto: "/images/docentes/MARTHA RENEE CARDOSO VIGIL.webp",
+    descripcion: "Docente y especialista en probabilidad aplicada, procesos estocásticos y modelos probabilísticos en la Universidad Nacional de Trujillo.",
+    linkTrabajo: {
+      titulo: "Ver Tesis y Trabajos",
+      url: "https://repositorio.unitru.edu.pe/collections/beb24350-804a-4da6-a293-b4e77db91771/search?spc.page=1&query=MSc.%20Martha%20Renee%20Cardoso%20Vigil"
+    }
   },
   {
     nombre: "Dra. Rosa Adriana Chu Campos",
