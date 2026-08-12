@@ -59,7 +59,12 @@ export const docentes = [
     grado: "Doctora",
     cursoPrincipal: "Principal D.E.",
     especialidades: ["Modelos lineales", "Econometría", "Análisis de varianza"],
-    foto: "/images/docentes/ROSA ADRIANA CHU CAMPOS.webp"
+    foto: "/images/docentes/ROSA ADRIANA CHU CAMPOS.webp",
+    descripcion: "Docente y especialista en modelos lineales, econometría y análisis de varianza en la Universidad Nacional de Trujillo.",
+    linkTrabajo: {
+      titulo: "Ver Tesis y Trabajos",
+      url: "https://repositorio.unitru.edu.pe/collections/beb24350-804a-4da6-a293-b4e77db91771/search?spc.page=1&query=Dra.%20Rosa%20Adriana%20Chu%20Campos"
+    }
   },
   // 3. Jefes de comités (Coordinadores)
   {
