@@ -134,7 +134,7 @@ export default function Inicio() {
   ];
 
   const cifras = [
-    { numero: "+60", etiqueta: "Años formando profesionales", sub: "de trayectoria ininterrumpida" },
+    { numero: "+40", etiqueta: "Años formando profesionales", sub: "de trayectoria ininterrumpida" },
     { numero: "800+", etiqueta: "Egresados a nivel nacional", sub: "aportando al desarrollo cuantitativo" },
     { numero: "100%", etiqueta: "Profesores de primer nivel", sub: "con maestría y doctorado" },
   ];
