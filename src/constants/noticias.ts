@@ -9,7 +9,7 @@ export const noticias = [
     fecha: '2025-06-15',
     fechaFormateada: '15 Jun 2025',
     link: '/investigacion/publicaciones',
-    imagen: '/images/noticias/interpolacion.png',
+    imagen: '/images/noticias/interpolacion.webp',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const noticias = [
     fecha: '2025-06-10',
     fechaFormateada: '10 Jun 2025',
     link: '/investigacion/publicaciones',
-    imagen: '/images/noticias/lazos_parentales.png',
+    imagen: '/images/noticias/lazos_parentales.webp',
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ export const noticias = [
     fecha: '2025-05-28',
     fechaFormateada: '28 May 2025',
     link: '/investigacion/proyectos',
-    imagen: '/images/noticias/tesis.png',
+    imagen: '/images/noticias/tesis.webp',
   },
   {
     id: 4,
@@ -42,6 +42,6 @@ export const noticias = [
     fecha: '2025-05-20',
     fechaFormateada: '20 May 2025',
     link: '/investigacion/proyectos',
-    imagen: '/images/noticias/tesis.png',
+    imagen: '/images/noticias/tesis.webp',
   },
 ];

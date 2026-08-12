@@ -11,7 +11,6 @@ import frontImage from '../assets/2023fotoestadistica.jpg';
 import frontImage2 from '../assets/fondo3.jpg';
 import frontImage3 from '../assets/frontunt.webp';
 import bibliotecaImg from '../assets/biblioteca_1.png';
-import laboratorioMecImg from '../assets/laboratorio_mec.png';
 import libroReclamacionesImg from '../assets/Bolsadetrabajo.png';
 import { noticias } from '../constants/noticias';
 import { director } from '../constants/autoridades';
@@ -590,12 +589,6 @@ export default function Inicio() {
               className="group relative rounded-3xl overflow-hidden bg-blue-deep h-[380px] md:h-[450px] flex items-end shadow-xl border border-gray-150"
             >
               <div className="absolute inset-0">
-                <img
-                  src={laboratorioMecImg}
-                  alt="MEC"
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-80 mix-blend-luminosity"
-                />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-deep via-blue-deep/60 to-transparent" />
                 <div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />
               </div>
