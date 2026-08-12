@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import clsx from 'clsx';
-import { Phone, Mail, Search, ChevronDown, Menu, X, ExternalLink } from 'lucide-react';
+import { Phone, Mail, Search, ChevronDown, Menu, X, ExternalLink, MapPin } from 'lucide-react';
 import logo from '../../assets/unt1.png';
 import logoEscuela from '../../assets/logo_ingAmb.png';
 import Breadcrumbs from './Breadcrumbs';
@@ -97,8 +97,8 @@ export default function Navbar() {
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 md:gap-8">
             <span className="font-semibold text-white">¿Tienes alguna duda?</span>
             <span className="flex items-center gap-1.5 hover:text-gold transition-colors cursor-pointer">
-              <Phone className="w-4 h-4" />
-              (+51) 920 027 273
+              <MapPin className="w-4 h-4" />
+              Acercarse a oficinas de estadística FCFYM
             </span>
             <span className="flex items-center gap-1.5 hover:text-gold transition-colors cursor-pointer">
               <Mail className="w-4 h-4" />

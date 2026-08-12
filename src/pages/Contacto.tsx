@@ -31,15 +31,20 @@ export default function Contacto() {
                   <div>
                     <h4 className="font-bold text-gray-900 text-sm mb-1 uppercase tracking-wider">Dirección</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">{informacionContacto.direccion}</p>
+                    {informacionContacto.detallesDireccion && (
+                      <p className="text-gray-500 text-xs mt-1 leading-relaxed">{informacionContacto.detallesDireccion}</p>
+                    )}
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center shrink-0 text-xl">📞</div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm mb-1 uppercase tracking-wider">Teléfonos</h4>
-                    <p className="text-gray-600 text-sm">{informacionContacto.telefonos.join(' / ')}</p>
+                {informacionContacto.telefonos && informacionContacto.telefonos.length > 0 && (
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center shrink-0 text-xl">📞</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 text-sm mb-1 uppercase tracking-wider">Teléfonos</h4>
+                      <p className="text-gray-600 text-sm">{informacionContacto.telefonos.join(' / ')}</p>
+                    </div>
                   </div>
-                </div>
+                )}
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center shrink-0 text-xl">✉️</div>
                   <div>

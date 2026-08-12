@@ -64,7 +64,7 @@ export default function Footer() {
                   { label: 'Historia de la Escuela', to: '/nosotros/historia' },
                   { label: 'Plan de Estudios', to: '/academico/malla-curricular' },
                   { label: 'Perfil del Egresado', to: '/nosotros/perfiles#egreso' },
-                  { label: 'Líneas de Investigación', to: '/investigacion/lineas' },
+                  { label: 'Publicaciones Científicas', to: '/investigacion/publicaciones' },
                   { label: 'Plana Docente', to: '/organizacion/docentes' },
                 ].map(({ label, to }) => (
                   <li key={to}>
@@ -88,12 +88,19 @@ export default function Footer() {
               <ul className="space-y-4">
                 <li className="flex gap-3 text-gray-300 text-sm items-start">
                   <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-                  <span>{informacionContacto.direccion}</span>
+                  <div className="flex flex-col">
+                    <span>{informacionContacto.direccion}</span>
+                    {informacionContacto.detallesDireccion && (
+                      <span className="text-xs text-gray-400 mt-1">{informacionContacto.detallesDireccion}</span>
+                    )}
+                  </div>
                 </li>
-                <li className="flex gap-3 text-gray-300 text-sm items-center">
-                  <Phone className="w-4 h-4 text-gold shrink-0" />
-                  <span>{informacionContacto.telefonos.join(' / ')}</span>
-                </li>
+                {informacionContacto.telefonos && informacionContacto.telefonos.length > 0 && (
+                  <li className="flex gap-3 text-gray-300 text-sm items-center">
+                    <Phone className="w-4 h-4 text-gold shrink-0" />
+                    <span>{informacionContacto.telefonos.join(' / ')}</span>
+                  </li>
+                )}
                 <li className="flex gap-3 text-sm items-center">
                   <Mail className="w-4 h-4 text-gold shrink-0" />
                   <a href={`mailto:${informacionContacto.correo}`} className="text-gray-300 hover:text-white transition-colors">
@@ -112,8 +119,7 @@ export default function Footer() {
                 <Clock className="w-4 h-4 text-gold shrink-0 mt-0.5" />
                 <div className="space-y-1">
                   <p className="text-white font-semibold">Lunes a Viernes</p>
-                  <p>08:00 – 13:00 hrs</p>
-                  <p>14:00 – 16:00 hrs</p>
+                  <p>07:00 – 14:45 hrs</p>
                 </div>
               </div>
               <div className="space-y-2 border-t border-white/10 pt-5">
@@ -153,47 +159,7 @@ export default function Footer() {
 
         </div>
 
-        {/* Banners: Libro de Reclamaciones & Bolsa de Trabajo */}
-        <div className="border-t border-white/10 pt-8 mt-8 flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-10">
-            {/* Libro de Reclamaciones */}
-            <a
-              href={LIBRO_RECLAMACIONES_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-gold/30 rounded-2xl p-5 w-full max-w-sm transition-all duration-300 group shadow-md"
-            >
-              <div className="w-14 h-14 shrink-0 flex items-center justify-center bg-gold/10 rounded-xl group-hover:bg-gold/20 transition-colors">
-                <BookOpen className="w-8 h-8 text-gold group-hover:scale-105 transition-transform" />
-              </div>
-              <div className="text-left">
-                <h4 className="font-display font-black text-sm uppercase tracking-wider text-white mb-0.5 group-hover:text-gold transition-colors">
-                  Libro de Reclamaciones
-                </h4>
-                <p className="text-xs text-gray-300 leading-tight">
-                  Formule sus quejas y reclamos sobre nuestro servicio.
-                </p>
-              </div>
-            </a>
-
-            {/* Bolsa de Trabajo */}
-            <div
-              className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-5 w-full max-w-sm shadow-md cursor-default"
-            >
-              <div className="w-14 h-14 shrink-0 flex items-center justify-center bg-white/10 rounded-xl">
-                <Briefcase className="w-8 h-8 text-gray-300" />
-              </div>
-              <div className="text-left">
-                <h4 className="font-display font-black text-sm uppercase tracking-wider text-white mb-0.5">
-                  Bolsa de Trabajo
-                </h4>
-                <p className="text-xs text-gray-300 leading-tight">
-                  Próximamente convocatorias y ofertas laborales.
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
+      </div>
       </div>
 
       {/* Bottom bar */}

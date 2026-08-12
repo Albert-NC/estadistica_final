@@ -26,6 +26,7 @@ const Perfiles = lazy(() => import('../pages/nosotros/Perfiles'));
 const OrganizacionIndex = lazy(() => import('../pages/organizacion/index'));
 const OrganizacionDireccion = lazy(() => import('../pages/organizacion/Direccion'));
 const Comites = lazy(() => import('../pages/organizacion/Comites'));
+const Administrativos = lazy(() => import('../pages/organizacion/Administrativos'));
 
 // Módulo: Académico
 const AcademicoIndex = lazy(() => import('../pages/academico/index'));
@@ -80,7 +81,7 @@ export default function AppRouter() {
                 <Route index element={<OrganizacionDireccion />} />
                 <Route path="direccion" element={<OrganizacionDireccion />} />
                 <Route path="docentes" element={<Docentes />} />
-                <Route path="administrativos" element={<EnConstruccion titulo="Administrativos" />} />
+                <Route path="administrativos" element={<Administrativos />} />
                 <Route path="comites" element={<Comites />} />
                 <Route path="estructura" element={<Organigrama />} />
               </Route>
@@ -100,7 +101,7 @@ export default function AppRouter() {
 
               {/* ── Investigación ── */}
               <Route path="/investigacion" element={<InvestigacionIndex />}>
-                <Route index element={<Lineas />} />
+                <Route index element={<Publicaciones />} />
                 <Route path="lineas" element={<Lineas />} />
                 <Route path="publicaciones" element={<Publicaciones />} />
                 <Route path="revistas" element={<Revistas />} />

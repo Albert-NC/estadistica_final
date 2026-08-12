@@ -130,9 +130,7 @@ export default function Inicio() {
   const accesosRapidos = [
     { titulo: "Plan de Estudios", descripcion: "Malla curricular actualizada por ciclos.", icono: BookOpen, link: "/academico/malla-curricular", imagen: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" },
     { titulo: "Plana Docente", descripcion: "Profesores e investigadores comprometidos.", icono: Users, link: "/organizacion/docentes", imagen: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" },
-    { titulo: "Investigación", descripcion: "Líneas, proyectos y publicaciones activas.", icono: FlaskConical, link: "/investigacion/proyectos", imagen: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=80" },
-    { titulo: "Grados y Títulos", descripcion: "Pasos y requisitos para tu titulación.", icono: GraduationCap, link: "/academico/titulacion", imagen: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80" },
-    { titulo: "Convenios", descripcion: "Alianzas con entidades de estadística y ciencia de datos.", icono: Handshake, link: "/academico/convenios", imagen: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=600&q=80" },
+    { titulo: "Investigación", descripcion: "Proyectos, revistas y publicaciones científicas.", icono: FlaskConical, link: "/investigacion/publicaciones", imagen: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=80" },
   ];
 
   const cifras = [
@@ -249,9 +247,14 @@ export default function Inicio() {
           </a>
 
           {/* Bolsa de Trabajo */}
-          <div className="flex items-center gap-3.5 cursor-default">
+          <a
+            href="https://jobboard.universia.net/unitruoportunidades?dateFrom=all&page=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3.5 group cursor-pointer"
+          >
             {/* Briefcase with search circle SVG */}
-            <svg className="w-[52px] h-[35px] text-white" viewBox="0 0 48 32" fill="none">
+            <svg className="w-[52px] h-[35px] text-white transition-transform group-hover:scale-105" viewBox="0 0 48 32" fill="none">
               <path d="M14 8V5c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v3" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
               <rect x="2" y="8" width="30" height="20" rx="3" stroke="currentColor" strokeWidth="2.5" fill="none" />
               <circle cx="27" cy="20" r="7.5" fill="#001d46" stroke="currentColor" strokeWidth="2.5" />
@@ -259,10 +262,10 @@ export default function Inicio() {
               <path d="M23.5 23.5c0-1.8 1.5-3 3.5-3s3.5 1.2 3.5 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
               <line x1="32.5" y1="25.5" x2="37" y2="30" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
             </svg>
-            <span className="text-[11px] md:text-[12px] font-display font-black tracking-wider text-white leading-tight uppercase">
+            <span className="text-[11px] md:text-[12px] font-display font-black tracking-wider text-white leading-tight uppercase group-hover:text-gold transition-colors">
               BOLSA DE<br />TRABAJO
             </span>
-          </div>
+          </a>
         </div>
       </section>
 
@@ -486,7 +489,7 @@ export default function Inicio() {
             center
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             {accesosRapidos.map((acceso, idx) => {
               const IconComp = acceso.icono;
               return (

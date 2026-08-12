@@ -116,16 +116,9 @@ export const NAV_LINKS: NavSection[] = [
               { name: 'Calidad (Autoevaluación / Acreditación)', path: '/organizacion/comites#calidad' },
               { name: 'Coteccu', path: '/organizacion/comites#coteccu' },
               { name: 'Consejería y tutoría', path: '/organizacion/comites#consejeria' },
-              { name: 'Comité de Investigación', path: '/organizacion/comites#investigacion' },
-              { name: 'Comisión', path: '/organizacion/comites#comision' },
+              { name: 'Seguimiento al Egresado', path: '/organizacion/comites#egresado' },
             ],
           },
-        ],
-      },
-      {
-        label: 'Estructura',
-        items: [
-          { name: 'Estructura organizacional', path: '/organizacion/estructura' },
         ],
       },
     ],
@@ -148,14 +141,6 @@ export const NAV_LINKS: NavSection[] = [
           { name: 'Bienestar', path: '#', external: true },
         ],
       },
-      {
-        label: 'Vinculación',
-        items: [
-          { name: 'Responsabilidad social', path: '/academico/responsabilidad-social' },
-          { name: 'Convenios', path: '/academico/convenios' },
-          { name: 'Movilidad', path: '/academico/movilidad' },
-        ],
-      },
     ],
   },
   {
@@ -165,7 +150,6 @@ export const NAV_LINKS: NavSection[] = [
       {
         label: 'Producción',
         items: [
-          { name: 'Líneas de investigación', path: '/investigacion/lineas' },
           { name: 'Publicaciones', path: '/investigacion/publicaciones' },
           { name: 'Revistas', path: '/investigacion/revistas' },
         ],

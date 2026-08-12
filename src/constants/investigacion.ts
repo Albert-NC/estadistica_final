@@ -35,15 +35,6 @@ export const proyectos = [
 
 export const publicaciones = [
   {
-    titulo: "Efecto de los lazos parentales en la autoestima de estudiantes de la Facultad de Ciencias Físicas y Matemáticas de la Universidad Nacional de Trujillo",
-    autores: "Gutiérrez de Alarcón, R., Cuadra Moreno, M. L., Alarcón Gutiérrez, R., Sánchez Pereda, S., & Alarcón Gutiérrez, C. G.",
-    año: 2025,
-    revista: "Revista de Investigación Estadística – REDIES (ISSN: 2708-1125), Vol. 7, N.° 1",
-    resumen: "Estudio observacional descriptivo que determina el efecto de los lazos parentales en la autoestima de 191 estudiantes universitarios. Utilizando el Cuestionario de Lazos Parentales de Parker y la Escala de Autoestima de Rosenberg, se halló que altos niveles de cuidado parental favorecen una autoestima saludable.",
-    url: "https://revistas.unitru.edu.pe/index.php/REDIES/article/view/7013",
-    pdf: "https://revistas.unitru.edu.pe/index.php/REDIES/article/download/7013/7086"
-  },
-  {
     titulo: "Modelos de interpolación espacial para los movimientos sísmicos del Perú",
     autores: "Rubio Jácobo, L. A., Ipanaqué Centeno, E., Rosas Reyes, Y. N., & Julián Rodríguez, C. F.",
     año: 2025,
@@ -51,6 +42,15 @@ export const publicaciones = [
     resumen: "Análisis geoestadístico de 2602 registros sísmicos del IGP (2020–2023) mediante modelos de interpolación espacial. Los modelos Matern y Exponencial presentaron mejor desempeño; se aplicó Kriging ordinario para generar mapas predictivos de distribución sísmica en el Perú.",
     url: "https://revistas.unitru.edu.pe/index.php/REDIES/article/view/7012",
     pdf: "https://revistas.unitru.edu.pe/index.php/REDIES/article/download/7012/7085"
+  },
+  {
+    titulo: "Efecto de los lazos parentales en la autoestima de estudiantes de la Facultad de Ciencias Físicas y Matemáticas de la Universidad Nacional de Trujillo",
+    autores: "Gutiérrez de Alarcón, R., Cuadra Moreno, M. L., Alarcón Gutiérrez, R., Sánchez Pereda, S., & Alarcón Gutiérrez, C. G.",
+    año: 2025,
+    revista: "Revista de Investigación Estadística – REDIES (ISSN: 2708-1125), Vol. 7, N.° 1",
+    resumen: "Estudio observacional descriptivo que determina el efecto de los lazos parentales en la autoestima de 191 estudiantes universitarios. Utilizando el Cuestionario de Lazos Parentales de Parker y la Escala de Autoestima de Rosenberg, se halló que altos niveles de cuidado parental favorecen una autoestima saludable.",
+    url: "https://revistas.unitru.edu.pe/index.php/REDIES/article/view/7013",
+    pdf: "https://revistas.unitru.edu.pe/index.php/REDIES/article/download/7013/7086"
   }
 ];
 

@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Card } from '../ui/Card';
-import { User, Mail } from 'lucide-react';
+import { User } from 'lucide-react';
 
 interface Autoridad {
   cargo: string;
   nombre: string;
   bio?: string;
-  correo: string;
+  linkTo?: string;
 }
 
 interface AutoridadCardProps {
@@ -25,12 +26,16 @@ export default function AutoridadCard({ autoridad, principal = false }: Autorida
         </div>
         
         <span className="text-secondary font-bold text-sm tracking-wider uppercase mb-2">{autoridad.cargo}</span>
-        <h3 className={`${principal ? 'text-2xl' : 'text-xl'} font-display font-bold text-primary mb-3`}>{autoridad.nombre}</h3>
-        {autoridad.bio && <p className="text-gray-600 font-body text-sm mb-4 leading-relaxed max-w-md">{autoridad.bio}</p>}
-        
-        <a href={`mailto:${autoridad.correo}`} className="text-gray-500 hover:text-primary text-sm mt-auto inline-flex items-center gap-2 transition-colors">
-          <Mail className="w-4 h-4" /> {autoridad.correo}
-        </a>
+        <h3 className={`${principal ? 'text-2xl' : 'text-xl'} font-display font-bold text-primary mb-3`}>
+          {autoridad.linkTo ? (
+            <Link to={autoridad.linkTo} className="hover:text-gold hover:underline transition-colors duration-200">
+              {autoridad.nombre}
+            </Link>
+          ) : (
+            autoridad.nombre
+          )}
+        </h3>
+        {autoridad.bio && <p className="text-gray-600 font-body text-sm leading-relaxed max-w-md">{autoridad.bio}</p>}
       </Card>
     </motion.div>
   );
