@@ -13,7 +13,7 @@ import clsx from 'clsx';
  */
 interface SectionTitleProps {
   title: string;
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   center?: boolean;
   badge?: string;
   className?: string;
