@@ -136,8 +136,7 @@ export default function Inicio() {
   const cifras = [
     { numero: "+60", etiqueta: "Años formando profesionales", sub: "de trayectoria ininterrumpida" },
     { numero: "800+", etiqueta: "Egresados a nivel nacional", sub: "aportando al desarrollo cuantitativo" },
-    { numero: "100%", etiqueta: "Malla actualizada", sub: "con enfoque en ciencia de datos" },
-    { numero: "97%", etiqueta: "Egresados ya trabajan", sub: "segun ..." },
+    { numero: "100%", etiqueta: "Profesores de primer nivel", sub: "con maestría y doctorado" },
   ];
 
   return (
@@ -274,7 +273,7 @@ export default function Inicio() {
           ══════════════════════════════════════════ */}
       <section ref={cifrasRef} className="bg-blue-deep py-0">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 md:grid-cols-3">
             {cifras.map((cifra, idx) => (
               <motion.div
                 key={idx}
@@ -282,7 +281,7 @@ export default function Inicio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1, duration: 0.5 }}
-                className={`py-8 px-6 text-center border-white/10 ${idx < 3 ? 'lg:border-r' : ''} ${idx < 2 ? 'border-r' : ''} border-b lg:border-b-0`}
+                className={`py-8 px-6 text-center border-white/10 ${idx < 2 ? 'md:border-r' : ''} ${idx < 2 ? 'border-b md:border-b-0' : ''}`}
               >
                 <div
                   className="text-4xl md:text-5xl font-display font-black mb-1"
