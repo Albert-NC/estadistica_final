@@ -11,10 +11,10 @@ export const docentes = [
     cursoPrincipal: "Asociado D.E.",
     especialidades: ["Geoestadística", "Modelos de interpolación", "Análisis espacial"],
     foto: "/images/docentes/LUIS ALBERTO RUBIO JACOBO.webp",
-    descripcion: "Especialista en estadística espacial, geoestadística aplicada y modelos de interpolación para el análisis de datos geoespaciales. Cuenta con amplia trayectoria docente y de investigación en la Universidad Nacional de Trujillo.",
+    descripcion: "Docente y especialista en estadística espacial, geoestadística aplicada y modelos de interpolación en la Universidad Nacional de Trujillo.",
     linkTrabajo: {
-      titulo: "Ver Perfil ORCID / Trabajos",
-      url: "https://orcid.org/0000-0001-5060-9998"
+      titulo: "Ver Tesis y Trabajos",
+      url: "https://repositorio.unitru.edu.pe/collections/beb24350-804a-4da6-a293-b4e77db91771/search?spc.page=1&query=Dr.%20Luis%20Alberto%20Rubio%20Jacobo"
     }
   },
   // 2. Siguientes 4 profesores principales
