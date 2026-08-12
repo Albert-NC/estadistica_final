@@ -7,10 +7,11 @@ import { Card } from '../components/ui/Card';
 import { YoutubeVideo } from '../components/ui/YoutubeVideo';
 import { BookOpen, Users, FlaskConical, GraduationCap, Handshake, ArrowRight, Calendar, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '../components/ui/Button';
-import frontImage from '../assets/2023fotoestadistica.jpg';
-import frontImage2 from '../assets/fondo3.jpg';
-import frontImage3 from '../assets/frontunt.webp';
-import bibliotecaImg from '../assets/biblioteca_1.png';
+import frontImage1 from '../assets/fondo1.webp';
+import frontImage2 from '../assets/fondo3.webp';
+import frontImage3 from '../assets/fondo4.webp';
+import planaDocenteImg from '../assets/planadocente.webp';
+import directorRubioImg from '../assets/director_rubio.webp';
 import libroReclamacionesImg from '../assets/Bolsadetrabajo.png';
 import { noticias } from '../constants/noticias';
 import { director } from '../constants/autoridades';
@@ -89,7 +90,7 @@ export default function Inicio() {
   // Carrusel del hero (máx. 3 imágenes): crossfade suave entre fondos.
   // Fotos de la Escuela de Ingeniería Ambiental (src/assets).
   const heroImages = [
-    frontImage,
+    frontImage1,
     frontImage2,
     frontImage3,
   ];
@@ -128,7 +129,7 @@ export default function Inicio() {
 
   const accesosRapidos = [
     { titulo: "Plan de Estudios", descripcion: "Malla curricular actualizada por ciclos.", icono: BookOpen, link: "/academico/malla-curricular", imagen: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" },
-    { titulo: "Plana Docente", descripcion: "Profesores e investigadores comprometidos.", icono: Users, link: "/organizacion/docentes", imagen: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" },
+    { titulo: "Plana Docente", descripcion: "Profesores e investigadores comprometidos.", icono: Users, link: "/organizacion/docentes", imagen: planaDocenteImg },
     { titulo: "Investigación", descripcion: "Proyectos, revistas y publicaciones científicas.", icono: FlaskConical, link: "/investigacion/publicaciones", imagen: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=80" },
   ];
 
@@ -304,67 +305,16 @@ export default function Inicio() {
 
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8">
-          {hasVideo ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Columna de Texto */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="flex flex-col"
-              >
-                <SectionTitle title="Bienvenida del **Rector**" />
-
-                <div className="text-gray-700 font-body space-y-4 leading-relaxed text-justify">
-                  <p>
-                    "¡Bienvenidos a la Carrera de Estadística! Este espacio te invita a sumergirte en el fascinante mundo del análisis de datos y la inferencia cuantitativa. Prepárate para iniciar un viaje académico riguroso, donde cultivarás habilidades esenciales para descubrir patrones, construir modelos predictivos y tomar decisiones informadas."
-                  </p>
-                  <p>
-                    "Estamos emocionados de acompañarte en este camino científico, contribuyendo a tu desarrollo integral como especialista en datos. ¡Comencemos juntos este desafiante viaje hacia el liderazgo analítico y la transformación digital de nuestra sociedad en la carrera de Estadística!"
-                  </p>
-                  <footer className="text-sm text-gray-600 not-italic font-semibold mt-4">
-                    Rector del Universidad Nacional de Trujillo
-                  </footer>
-                </div>
-              </motion.div>
-
-              {/* Columna de Video */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="w-full aspect-video rounded-xl overflow-hidden shadow-2xl relative border-4 border-gray-50 bg-[#9E9E9E] flex items-center justify-center"
-              >
-                {/* Para agregar el video de YouTube real, descomenta la siguiente línea y pon tu ID: */}
-                {/* 
-                <YoutubeVideo
-                  videoId={videoId}
-                  title="Video Institucional Estadística UNT"
-                /> 
-                */}
-
-                {/* Maqueta del reproductor según diseño */}
-                <div className="relative w-48 h-28 bg-[#757575]/40 rounded-3xl flex items-center justify-center gap-4 border border-white/10 backdrop-blur-[2px]">
-                  <div className="w-3.5 h-3.5 rounded-full bg-white/30" />
-                  <div className="w-16 h-16 bg-[#E6AC09] text-[#001D46] rounded-full flex items-center justify-center shadow-lg">
-                    <Play className="w-8 h-8 fill-current ml-1 text-[#001D46]" />
-                  </div>
-                  <div className="w-3.5 h-3.5 rounded-full bg-white/30" />
-                </div>
-              </motion.div>
-            </div>
-          ) : (
-            /* Solo bienvenida centrada y justificada */
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
+            {/* Columna de Texto */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="max-w-3xl mx-auto flex flex-col text-center"
+              className="lg:col-span-7 flex flex-col justify-center text-left"
             >
-              <SectionTitle title="Bienvenida del **Rector**" center />
+              <SectionTitle title="Bienvenida del **Director de Escuela**" />
 
               <div className="text-gray-700 font-body space-y-4 leading-relaxed text-justify mt-6">
                 <p>
@@ -373,12 +323,36 @@ export default function Inicio() {
                 <p>
                   "Estamos emocionados de acompañarte en este camino científico, contribuyendo a tu desarrollo integral como especialista en datos. ¡Comencemos juntos este desafiante viaje hacia el liderazgo analítico y la transformación digital de nuestra sociedad en la carrera de Estadística!"
                 </p>
-                <footer className="text-sm text-gray-600 not-italic font-semibold text-center mt-6 block">
-                  Rector del Universidad Nacional de Trujillo
-                </footer>
+                <div className="mt-6 text-left">
+                  <h4 className="font-display font-black text-primary text-lg">
+                    Dr. Luis Alberto Rubio Jacobo
+                  </h4>
+                  <p className="text-sm text-gray-500 font-semibold uppercase tracking-wider mt-0.5">
+                    Director de la Escuela Profesional de Estadística
+                  </p>
+                </div>
               </div>
             </motion.div>
-          )}
+
+            {/* Columna de Imagen */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-5 flex justify-center"
+            >
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-50 bg-gray-100 max-w-xs md:max-w-sm w-full">
+                <img
+                  src={directorRubioImg}
+                  alt="Dr. Luis Alberto Rubio Jacobo"
+                  className="w-full h-auto object-cover aspect-[3/4] object-top"
+                  loading="lazy"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
       {/* ─── Sección Noticias y Actualidad ─── */}
@@ -549,65 +523,63 @@ export default function Inicio() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
 
             {/* Biblioteca */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="group relative rounded-3xl overflow-hidden bg-blue-deep h-[380px] md:h-[450px] flex items-end shadow-xl border border-gray-150"
-            >
-              <div className="absolute inset-0">
-                <img
-                  src={bibliotecaImg}
-                  alt="Biblioteca"
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-80 mix-blend-luminosity"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-deep via-blue-deep/60 to-transparent" />
-                <div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />
-              </div>
-              <div className="relative z-10 p-8 md:p-10 w-full transform group-hover:-translate-y-2 transition-transform duration-500 text-left">
-                <span className="inline-block px-3.5 py-1.5 bg-gold text-blue-deep text-[10px] font-black tracking-widest uppercase rounded-md mb-4 shadow-lg">
-                  Estudio e Investigación
-                </span>
-                <h3 className="text-2xl md:text-4xl font-display font-black text-white mb-3 leading-tight">
-                  Biblioteca
-                </h3>
-                <div className="w-24 h-1 bg-gold mb-4 origin-left scale-x-50 transition-transform duration-500 group-hover:scale-x-100"></div>
-                <p className="text-white/80 text-sm md:text-base leading-relaxed max-w-lg">
-                  Un espacio diseñado para la lectura, el estudio continuo y el acceso a material bibliográfico especializado en estadística y ciencia de datos.
-                </p>
-              </div>
-            </motion.div>
+            <Link to="/academico/biblioteca" className="block">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="group relative rounded-3xl overflow-hidden bg-blue-deep h-[380px] md:h-[450px] flex items-end shadow-xl border border-gray-150 cursor-pointer"
+              >
+                <div className="absolute inset-0">
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-deep via-blue-deep/60 to-transparent" />
+                  <div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />
+                </div>
+                <div className="relative z-10 p-8 md:p-10 w-full transform group-hover:-translate-y-2 transition-transform duration-500 text-left">
+                  <span className="inline-block px-3.5 py-1.5 bg-gold text-blue-deep text-[10px] font-black tracking-widest uppercase rounded-md mb-4 shadow-lg">
+                    Estudio e Investigación
+                  </span>
+                  <h3 className="text-2xl md:text-4xl font-display font-black text-white mb-3 leading-tight">
+                    Biblioteca
+                  </h3>
+                  <div className="w-24 h-1 bg-gold mb-4 origin-left scale-x-50 transition-transform duration-500 group-hover:scale-x-100"></div>
+                  <p className="text-white/80 text-sm md:text-base leading-relaxed max-w-lg">
+                    Un espacio diseñado para la lectura, el estudio continuo y el acceso a material bibliográfico especializado en estadística y ciencia de datos.
+                  </p>
+                </div>
+              </motion.div>
+            </Link>
 
             {/* MEC */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="group relative rounded-3xl overflow-hidden bg-blue-deep h-[380px] md:h-[450px] flex items-end shadow-xl border border-gray-150"
-            >
-              <div className="absolute inset-0">
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-deep via-blue-deep/60 to-transparent" />
-                <div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />
-              </div>
-              <div className="relative z-10 p-8 md:p-10 w-full transform group-hover:-translate-y-2 transition-transform duration-500 text-left">
-                <span className="inline-block px-3.5 py-1.5 bg-gold text-blue-deep text-[10px] font-black tracking-widest uppercase rounded-md mb-4 shadow-lg">
-                  Laboratorio
-                </span>
-                <h3 className="text-2xl md:text-4xl font-display font-black text-white mb-1 leading-tight">
-                  MEC
-                </h3>
-                <p className="text-gold font-display font-bold text-xs md:text-sm mb-3">
-                  (Módulo Estadístico Computacional)
-                </p>
-                <div className="w-24 h-1 bg-gold mb-4 origin-left scale-x-50 transition-transform duration-500 group-hover:scale-x-100"></div>
-                <p className="text-white/80 text-sm md:text-base leading-relaxed max-w-lg font-body">
-                  Contamos con <strong>2 módulos estadísticos computacionales</strong> donde los estudiantes practican con software de la industria: <strong>R</strong> (análisis estadístico), <strong>SQL</strong> (bases de datos), <strong>SPSS</strong> (IBM) y <strong>SAS</strong> (estadística empresarial avanzada).
-                </p>
-              </div>
-            </motion.div>
+            <Link to="/academico/laboratorios" className="block">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="group relative rounded-3xl overflow-hidden bg-blue-deep h-[380px] md:h-[450px] flex items-end shadow-xl border border-gray-150 cursor-pointer"
+              >
+                <div className="absolute inset-0">
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-deep via-blue-deep/60 to-transparent" />
+                  <div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />
+                </div>
+                <div className="relative z-10 p-8 md:p-10 w-full transform group-hover:-translate-y-2 transition-transform duration-500 text-left">
+                  <span className="inline-block px-3.5 py-1.5 bg-gold text-blue-deep text-[10px] font-black tracking-widest uppercase rounded-md mb-4 shadow-lg">
+                    Laboratorio
+                  </span>
+                  <h3 className="text-2xl md:text-4xl font-display font-black text-white mb-1 leading-tight">
+                    MEC
+                  </h3>
+                  <p className="text-gold font-display font-bold text-xs md:text-sm mb-3">
+                    (Módulo Estadístico Computacional)
+                  </p>
+                  <div className="w-24 h-1 bg-gold mb-4 origin-left scale-x-50 transition-transform duration-500 group-hover:scale-x-100"></div>
+                  <p className="text-white/80 text-sm md:text-base leading-relaxed max-w-lg font-body">
+                    Contamos con <strong>2 módulos estadísticos computacionales</strong> donde los estudiantes practican con software de la industria: <strong>R</strong> (análisis estadístico), <strong>SQL</strong> (bases de datos), <strong>SPSS</strong> (IBM) y <strong>SAS</strong> (estadística empresarial avanzada).
+                  </p>
+                </div>
+              </motion.div>
+            </Link>
 
           </div>
         </div>

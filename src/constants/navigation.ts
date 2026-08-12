@@ -138,7 +138,6 @@ export const NAV_LINKS: NavSection[] = [
         items: [
           { name: 'Laboratorios', path: '/academico/laboratorios' },
           { name: 'Biblioteca', path: '/academico/biblioteca' },
-          { name: 'Bienestar', path: '#', external: true },
         ],
       },
     ],

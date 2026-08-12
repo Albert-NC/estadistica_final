@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../../components/ui/SectionTitle';
-import laboratorioMecImg from '../../assets/laboratorio_mec.png';
 
 export default function Laboratorios() {
   return (
@@ -14,28 +13,13 @@ export default function Laboratorios() {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mt-12 md:mt-16">
-          {/* Imagen izquierda */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="relative rounded-3xl overflow-hidden shadow-md border border-gray-150 bg-gray-50 flex justify-center items-center"
-          >
-            <img 
-              src={laboratorioMecImg} 
-              alt="MEC Software (SQL & IBM SPSS Statistics)" 
-              className="w-full h-auto object-cover max-h-[500px]"
-            />
-          </motion.div>
-
           {/* Información derecha */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col justify-center"
+            className="flex flex-col justify-center lg:col-start-2"
           >
             <span className="bg-gold/15 text-gold-dark px-3.5 py-1 rounded-full text-[10px] tracking-widest uppercase font-black w-max mb-4">
               Laboratorio
