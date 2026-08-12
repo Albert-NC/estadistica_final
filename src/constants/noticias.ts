@@ -31,7 +31,7 @@ export const noticias = [
     fecha: '2025-05-28',
     fechaFormateada: '28 May 2025',
     link: '/investigacion/proyectos',
-    imagen: '',
+    imagen: '/images/noticias/tesis.png',
   },
   {
     id: 4,
@@ -42,6 +42,6 @@ export const noticias = [
     fecha: '2025-05-20',
     fechaFormateada: '20 May 2025',
     link: '/investigacion/proyectos',
-    imagen: '',
+    imagen: '/images/noticias/tesis.png',
   },
 ];
