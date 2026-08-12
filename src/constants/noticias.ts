@@ -9,7 +9,7 @@ export const noticias = [
     fecha: '2025-06-15',
     fechaFormateada: '15 Jun 2025',
     link: '/investigacion/publicaciones',
-    imagen: '',
+    imagen: '/images/noticias/interpolacion.png',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const noticias = [
     fecha: '2025-06-10',
     fechaFormateada: '10 Jun 2025',
     link: '/investigacion/publicaciones',
-    imagen: '',
+    imagen: '/images/noticias/lazos_parentales.png',
   },
   {
     id: 3,
