@@ -72,21 +72,36 @@ export const docentes = [
     grado: "Doctor",
     cursoPrincipal: "Principal T.C.",
     especialidades: ["Control estadístico de calidad", "Metodologías Seis Sigma", "Optimización de procesos"],
-    foto: "/images/docentes/CARLOS ALBERTO MINCHÓN MEDINA.webp"
+    foto: "/images/docentes/CARLOS ALBERTO MINCHÓN MEDINA.webp",
+    descripcion: "Docente y especialista en control estadístico de calidad, metodologías Seis Sigma y optimización de procesos en la Universidad Nacional de Trujillo.",
+    linkTrabajo: {
+      titulo: "Ver Tesis y Trabajos",
+      url: "https://repositorio.unitru.edu.pe/collections/beb24350-804a-4da6-a293-b4e77db91771/search?spc.page=1&query=Dr.%20Carlos%20Alberto%20Minch%C3%B3n%20Medina"
+    }
   },
   {
     nombre: "MSc. Silvana America Sanchez Pereda",
     grado: "Maestra",
     cursoPrincipal: "Auxiliar T.C.",
     especialidades: ["Teoría de probabilidad", "Estadística general", "Fundamentos matemáticos"],
-    foto: "/images/docentes/SILVANA AMERICA SANCHEZ PEREDA.webp"
+    foto: "/images/docentes/SILVANA AMERICA SANCHEZ PEREDA.webp",
+    descripcion: "Docente y especialista en teoría de probabilidad, estadística general y fundamentos matemáticos en la Universidad Nacional de Trujillo.",
+    linkTrabajo: {
+      titulo: "Ver Tesis y Trabajos",
+      url: "https://repositorio.unitru.edu.pe/collections/beb24350-804a-4da6-a293-b4e77db91771/search?spc.page=1&query=MSc.%20Silvana%20America%20Sanchez%20Pereda"
+    }
   },
   {
     nombre: "MSc. Aurora Rosa Neciosup Obando",
     grado: "Maestra",
     cursoPrincipal: "Asociado T.C.",
     especialidades: ["Programación en R", "Simulación Montecarlo", "Software estadístico"],
-    foto: "/images/docentes/AURORA ROSA NECIOSUP OBANDO.webp"
+    foto: "/images/docentes/AURORA ROSA NECIOSUP OBANDO.webp",
+    descripcion: "Docente y especialista en programación en R, simulación Montecarlo y desarrollo con software estadístico en la Universidad Nacional de Trujillo.",
+    linkTrabajo: {
+      titulo: "Ver Tesis y Trabajos",
+      url: "https://repositorio.unitru.edu.pe/collections/beb24350-804a-4da6-a293-b4e77db91771/search?spc.page=1&query=MSc.%20Aurora%20Rosa%20Neciosup%20Obando"
+    }
   },
   {
     nombre: "MSc. Roger Demetrio Reyna Segura",
