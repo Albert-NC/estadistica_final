@@ -28,6 +28,35 @@ interface DocenteCardProps {
 }
 
 export default function DocenteCard({ docente, noFlip = false }: DocenteCardProps) {
+  const getDescripcion = () => {
+    if (docente.descripcion) return docente.descripcion;
+    if (docente.especialidades && docente.especialidades.length > 0) {
+      const especialidadesLower = docente.especialidades.map(e => e.toLowerCase());
+      if (especialidadesLower.length === 1) {
+        return `Docente y especialista en ${especialidadesLower[0]} en la Universidad Nacional de Trujillo.`;
+      }
+      if (especialidadesLower.length === 2) {
+        return `Docente y especialista en ${especialidadesLower[0]} y ${especialidadesLower[1]} en la Universidad Nacional de Trujillo.`;
+      }
+      const arrayCopy = [...especialidadesLower];
+      const last = arrayCopy.pop();
+      return `Docente y especialista en ${arrayCopy.join(', ')} y ${last} en la Universidad Nacional de Trujillo.`;
+    }
+    return '';
+  };
+
+  const descripcion = getDescripcion();
+
+  const getLinkTrabajo = () => {
+    if (docente.linkTrabajo) return docente.linkTrabajo;
+    const query = encodeURIComponent(docente.nombre);
+    return {
+      titulo: "Ver Tesis y Trabajos",
+      url: `https://repositorio.unitru.edu.pe/collections/beb24350-804a-4da6-a293-b4e77db91771/search?spc.page=1&query=${query}`
+    };
+  };
+
+  const linkTrabajo = getLinkTrabajo();
   if (noFlip) {
     return (
       <motion.div
@@ -122,9 +151,9 @@ export default function DocenteCard({ docente, noFlip = false }: DocenteCardProp
           </div>
           
           <div className="flex-1 overflow-y-auto pr-1 text-left custom-scrollbar space-y-3">
-            {docente.descripcion && (
+            {descripcion && (
               <p className="text-xs text-white/90 leading-relaxed text-justify">
-                {docente.descripcion}
+                {descripcion}
               </p>
             )}
 
@@ -145,14 +174,14 @@ export default function DocenteCard({ docente, noFlip = false }: DocenteCardProp
             )}
           </div>
 
-          {docente.linkTrabajo && (
+          {linkTrabajo && (
             <a
-              href={docente.linkTrabajo.url}
+              href={linkTrabajo.url}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-flex items-center justify-center gap-1.5 bg-gold hover:bg-[#C49308] text-blue-deep font-black px-3 py-2 rounded-xl text-xs transition-colors w-full cursor-pointer shadow-md"
             >
-              <span>{docente.linkTrabajo.titulo}</span>
+              <span>{linkTrabajo.titulo}</span>
               <span className="text-[9px]">↗</span>
             </a>
           )}
