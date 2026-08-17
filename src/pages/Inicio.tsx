@@ -142,6 +142,53 @@ export default function Inicio() {
   return (
     <PageWrapper>
       {/* ══════════════════════════════════════════
+          FRANJA MÓVIL — Libro de Reclamaciones y Bolsa de Trabajo
+          (Visible únicamente en celulares, debajo de UNT | ESTADÍSTICA y encima del hero)
+          ══════════════════════════════════════════ */}
+      <div className="block md:hidden bg-white border-b border-gray-200 py-3 px-4 shadow-sm z-20 relative">
+        <div className="container mx-auto flex items-center justify-around gap-4 max-w-md select-none">
+          {/* Libro de Reclamaciones */}
+          <a
+            href="https://reclamos.servicios.gob.pe/?institution_id=247"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center group cursor-pointer"
+          >
+            <img
+              src={libroReclamacionesImg}
+              alt="Libro de Reclamaciones"
+              className="w-28 sm:w-32 h-auto object-contain transition-transform group-hover:scale-105"
+              style={{ filter: 'brightness(0)' }}
+            />
+          </a>
+
+          {/* Separador vertical sutil */}
+          <span className="w-px h-8 bg-gray-200" aria-hidden="true" />
+
+          {/* Bolsa de Trabajo */}
+          <a
+            href="https://jobboard.universia.net/unitruoportunidades?dateFrom=all&page=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2.5 group cursor-pointer"
+          >
+            {/* Briefcase with search circle SVG */}
+            <svg className="w-10 h-7 text-black transition-transform group-hover:scale-105 shrink-0" viewBox="0 0 48 32" fill="none">
+              <path d="M14 8V5c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v3" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+              <rect x="2" y="8" width="30" height="20" rx="3" stroke="currentColor" strokeWidth="2.5" fill="none" />
+              <circle cx="27" cy="20" r="7.5" fill="white" stroke="currentColor" strokeWidth="2.5" />
+              <circle cx="27" cy="17.5" r="2" fill="currentColor" />
+              <path d="M23.5 23.5c0-1.8 1.5-3 3.5-3s3.5 1.2 3.5 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <line x1="32.5" y1="25.5" x2="37" y2="30" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+            </svg>
+            <span className="text-[11px] font-display font-black tracking-wider text-black leading-tight uppercase group-hover:text-gold transition-colors">
+              BOLSA DE<br />TRABAJO
+            </span>
+          </a>
+        </div>
+      </div>
+
+      {/* ══════════════════════════════════════════
           HERO — Motivador y enérgico para estudiantes
           ══════════════════════════════════════════ */}
       <section
